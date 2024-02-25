@@ -1,0 +1,23 @@
+body{
+    background-image: url(images/login2-removebg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.form-edit{
+    padding: 10rem 1rem 3rem 4rem;
+}
+.fonts{
+    font-family: cursive;
+}
+.button{
+    width: 8rem;
+    background-color: #20ba32;
+}
+.text{
+    color: rgb(232, 170, 88);
+}
+p a{
+    text-decoration: none;
+    color:rgb(232, 170, 88);;
+}

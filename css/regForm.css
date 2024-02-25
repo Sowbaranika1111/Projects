@@ -1,0 +1,19 @@
+body{
+    background-image: url(./images/bgimg.jpg);
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+.container-sm{
+    background-color: rgb(241, 159, 229);
+    width: 40%;
+    height: 50%;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}

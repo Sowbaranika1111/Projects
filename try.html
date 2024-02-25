@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <section class="mt-5  d-flex justify-content-center align-itmes-center">
+        <div class="container form-group">
+            <div class="card">
+                <div class="card-body">
+                    <form action="" method="post">
+                        <input type="hidden" name="update_id" value="' . $user_row['id'] . '">
+                        <label for="update_name" class="col-form-label">Name:</label>
+                        <input type="text" id="update_name" class="form-control" name="update_name" value="' . $user_row['userName'] . '"> <br>
+                
+                        <label for="update_phone" class="col-form-label">Phone:</label>
+                        <input type="tel" id="update_phone"  class="form-control" name="update_phone" value="' . $user_row['phone'] . '"> <br>
+                
+                        <label for="update_age" class="col-form-label">Age:</label>
+                        <select name="update_age" id="update_age">
+                            <option value="below 15" ' . ($user_row['age'] == 'below 15' ? 'selected' : '') . '>Below 15</option>
+                            <option value="15-30" ' . ($user_row['age'] == '15-30' ? 'selected' : '') . '>15-30</option>
+                            <option value="30-45" ' . ($user_row['age'] == '30-45' ? 'selected' : '') . '>30-45</option>
+                            <option value="above 45" ' . ($user_row['age'] == 'above 45' ? 'selected' : '') . '>Above 45</option>
+                        </select> <br>
+                
+                        <label class="col-form-label custom-control-label">Gender:</label>
+                        <input type="radio" name="update_gender" value="Male" ' . ($user_row['gender'] == 'Male' ? 'checked' : '') . '> Male
+                        <input type="radio" name="update_gender" value="Female" ' . ($user_row['gender'] == 'Female' ? 'checked' : '') . '> Female
+                        <input type="radio" name="update_gender" value="Others" ' . ($user_row['gender'] == 'Others' ? 'checked' : '') . '> Others <br>
+                
+                        <label for="update_dob" class=" col-form-label">DOB:</label>
+                        <input type="date" name="update_dob" id="update_dob" value="' . $user_row['dob'] . '"> <br>
+                
+                        <label for="update_address">Address:</label>
+                        <textarea name="update_address" id="update_address">' . $user_row['addr'] . '</textarea> <br>
+                
+                        <button class="btn btn-outline-success" type="submit" name="save_update">SAVE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+
+</html>
+
+
+echo '<script>
+    document.getElementById("name").value = "' . $user_row['userName'] . '";
+            document.getElementById("phone").value = "' . $user_row['phone'] . '";
+            document.getElementById("age").value = "' . $user_row['age'] . '";
+            // Set the gender radio button based on the user\'s gender
+            var gender = "' . $user_row['gender'] . '";
+            if (gender === "Male") {
+                document.getElementById("male").checked = true;
+            } else if (gender === "Female") {
+                document.getElementById("female").checked = true;
+            } else {
+                document.getElementById("others").checked = true;
+            }
+            document.getElementById("date").value = "' . $user_row['dob'] . '";
+            document.getElementById("addr").value = "' . $user_row['addr'] . '";
+
+            document.getElementById("update").style.display = "block";
+            </script>';
+
+            
+<form action="" method="post">
+    <input type="hidden" name="update_id" value="' . $user_row['id'] . '">
+    <label for="update_name">Name:</label>
+    <input type="text" name="update_name" id="update_name" value="' . $user_row['userName'] . '"> <br>
+
+    <label for="update_phone">Phone:</label>
+    <input type="tel" name="update_phone" id="update_phone" value="' . $user_row['phone'] . '"> <br>
+
+    <label for="update_age">Age:</label>
+    <select name="update_age" id="update_age">
+        <option value="below 15" ' . ($user_row['age'] == 'below 15' ? 'selected' : '') . '>Below 15</option>
+        <option value="15-30" ' . ($user_row['age'] == '15-30' ? 'selected' : '') . '>15-30</option>
+        <option value="30-45" ' . ($user_row['age'] == '30-45' ? 'selected' : '') . '>30-45</option>
+        <option value="above 45" ' . ($user_row['age'] == 'above 45' ? 'selected' : '') . '>Above 45</option>
+    </select> <br>
+
+    <label>Gender:</label>
+    <input type="radio" name="update_gender" value="Male" ' . ($user_row['gender'] == 'Male' ? 'checked' : '') . '> Male
+    <input type="radio" name="update_gender" value="Female" ' . ($user_row['gender'] == 'Female' ? 'checked' : '') . '> Female
+    <input type="radio" name="update_gender" value="Others" ' . ($user_row['gender'] == 'Others' ? 'checked' : '') . '> Others <br>
+
+    <label for="update_dob">DOB:</label>
+    <input type="date" name="update_dob" id="update_dob" value="' . $user_row['dob'] . '"> <br>
+
+    <label for="update_address">Address:</label>
+    <textarea name="update_address" id="update_address">' . $user_row['addr'] . '</textarea> <br>
+
+    <button class="btn btn-outline-success" type="submit" name="save_update">SAVE</button>
+</form>';
