@@ -6,107 +6,131 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/plants.css">
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/all.min_fontAwesome.css">
-  
+  <link rel="stylesheet" href="css/plants.css">
+  <!-- <link rel="stylesheet" href="scss/plants.scss"> -->
 </head>
 
-<body>
-  <div class="container">
-    <header class="bg-success">
-    <div class="row">
-      <div class="col-sm-4 d-flex align-items-center justify-content-center ">
-        <h1 >CROPCARE AI</h2>
-      </div>
-      <div class="col-sm-8">
-        
+<body class="container">
+  <hr><br><br>
+  <div class="container fixed-header ">
+    <header class="top-nav d-flex">
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center justify-content-center">
+          <h1>CROPCARE AI</h1>
+        </div>
+        <div class="col-sm-8">
+          <nav>
+            <ul class="header_menus">
+              <div class="d-flex gap-2 justify-content-end py-4">
+                <li class="header_link"><a href="#home">
+                  <span
+                    class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-danger-subtle border border-primary-subtle rounded-pill">
+                    <img class="rounded-circle me-1" width="24" height="24" src="css/images/nature_green.jpg"
+                      alt="">HOME
+                  </span>
+                </a></li>
+                <!-- <span class="badge d-flex align-items-center p-1 pe-2 text-secondary-emphasis bg-secondary-subtle border border-secondary-subtle rounded-pill">
+                          <img class="rounded-circle me-1" width="24" height="24" src="https://github.com/mdo.png" alt="">HOW TO USE
+                        </span> -->
 
-          <div class="  d-flex gap-2 justify-content-end py-5">
-      
-            <span
-              class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="" alt="">HOME
-            </span>
-            <!-- <span class="badge d-flex align-items-center p-1 pe-2 text-secondary-emphasis bg-secondary-subtle border border-secondary-subtle rounded-pill">
-                    <img class="rounded-circle me-1" width="24" height="24" src="https://github.com/mdo.png" alt="">HOW TO USE
-                  </span> -->
-      
-            <a href="#goal"><span
-              class="badge d-flex align-items-center p-1 pe-2 text-success-emphasis bg-success-subtle border border-success-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="" alt="">GOAL
-            </span></a>
-      
-            <a href="#benefits">
-              <span
-              class="badge d-flex align-items-center p-1 pe-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="" alt="">BENEFITS
-            </span>
-            </a>
-      
-            <a href="#faq">
-              <span
-              class="badge d-flex align-items-center p-1 pe-2 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="" alt="">FAQ
-            </span>
-            </a>
-            
-            <a href="#ourService">
-              <span
-              class="badge d-flex align-items-center p-1 pe-2 text-info-emphasis bg-info-subtle border border-info-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="" alt="">OUR SERVICE
-            </span>
-            </a>
-      
-            <a href="#feedback">
-              <span
-              class="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-light-subtle border border-dark-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="" alt="">FEEDBACK
-            </span>
-            </a>
-      
-            <a href="#contactUs">
-              <span
-              class="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="" alt="">CONTACT US
-            </span>
-            </a>
-          </div>
-        
+                <li class="header_link">
+                  <a href="#goal"><span
+                      class="badge d-flex align-items-center p-1 pe-2 text-success-emphasis bg-danger-subtle border border-success-subtle rounded-pill">
+                      <img class="rounded-circle me-1" width="24" height="24" src="css/images/nature_green.jpg"
+                        alt="">GOAL
+                    </span></a>
+                </li>
+
+                <li class="header_link">
+                  <a href="#benefits">
+                    <span
+                      class="badge d-flex align-items-center p-1 pe-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-pill">
+                      <img class="rounded-circle me-1" width="24" height="24" src="css/images/nature_green.jpg" alt="">BENEFITS
+                    </span>
+                  </a>
+                </li>
+
+                <li class="header_link">
+                  <a href="#faq">
+                    <span
+                      class="badge d-flex align-items-center p-1 pe-2 text-warning-emphasis bg-danger-subtle border border-warning-subtle rounded-pill">
+                      <img class="rounded-circle me-1" width="24" height="24" src="css/images/nature_green.jpg" alt="">FAQ
+                    </span>
+                  </a>
+                </li>
+
+                <li class="header_link">
+                  <a href="#ourService">
+                    <span
+                      class="badge d-flex align-items-center p-1 pe-2 text-info-emphasis bg-danger-subtle border border-info-subtle rounded-pill">
+                      <img class="rounded-circle me-1" width="24" height="24" src="css/images/nature_green.jpg" alt="">OUR SERVICE
+                    </span>
+                  </a>
+                </li>
+
+                <li class="header_link">
+                  <a href="#feedback">
+                    <span
+                      class="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-danger-subtle border border-dark-subtle rounded-pill">
+                      <img class="rounded-circle me-1" width="24" height="24" src="css/images/nature_green.jpg" alt="">FEEDBACK
+                    </span>
+                  </a>
+                </li>
+
+                <li class="header_link">
+                  <a href="#contactUs">
+                    <span
+                      class="badge d-flex align-items-center p-1 pe-2 text-dark-emphasis bg-danger-subtle border border-dark-subtle rounded-pill">
+                      <img class="rounded-circle me-1" width="24" height="24" src="css/images/nature_green.jpg" alt="">CONTACT US
+                    </span>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
   </div>
-<!--    Home -->
-  <section id="home" class=" py-5">
+  <hr>
+  <!--    Home -->
+  <section id="home" class="homey">
     <div class="container">
       <div class="row">
-
         <div class="col">
           <div class="card">
-            <div class="card-body">           
-                <img src="css/images/plant-pot-cartoon" alt="plant">
+            <div class="card-body">
+              <img class="img-fluid mx-auto py-5 plant-img" src="css/images/plant-pot-cartoon" alt="plant">
             </div>
           </div>
         </div>
-        <div class="col bg-light">
+        <div class="col uploadArea d-flex justify-content-center align-items-center">
           <div class="card">
             <div class="card-body">
-              <p class="p-5 gap-3" >Has your green family member gone sick?<span>Don't worry!</span>Upload the snapshopts of him and we
+              <p class="p-5 gap-2">Has your green family member gone sick?<br><span>Don't worry!</span><br>Upload the
+                snapshopts
+                of him and we
                 will help
                 you save him</p>
+              <div class="btn btn-primary btn-lg d-flex justify-content-center btn_adjust" type="submit">Upload Image
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-            <!-- Goal -->
-  <section id="goal" class="bg-danger p-5">
+  
+  <!-- Goal -->
+  <hr>
+  <section id="goal" class="goal p-5">
     <div class="container">
       <div class="row">
 
-        <div class="col-6">
+        <div class="col-6 d-flex justify-content-center align-items-center mission">
           <div class="card">
             <div class="card-body">
               <p>Our mission is to empower individuals to identify plant illnesses independently, eliminating the need
@@ -120,49 +144,64 @@
           </div>
         </div>
         <div class="col">
-            <div class="bg-danger justify-content-end">           
-                <img style="width:20rem ;height:20rem" src="css/images/vision_mission-removebg.png" alt="vision">
-            </div>
+          <div class=" d-flex justify-content-center align-items-center">
+            <img class="animated-img img-fluid  mx-auto py-5 " style="width:20rem ;height:20rem"
+              src="css/images/vision_mission-removebg.png" alt="vision">
           </div>
+        </div>
       </div>
     </div>
   </section>
-<!-- ===========Benefits of plants -->
-  <section id="benefits" class="bg-warning py-5 m-5 text-center">
-    <span>Benefits of plants</span>
-    <ul>
-      <li>Improving your mood</li>
-      <li>Reducing fatigue</li>
-      <li> Lowering stress and anxiety</li>
-      <li> Improving office performance and focus</li>
-      <li> Boosting healing and pain tolerance</li>
-      <li> Minimizing the occurrence of headaches by improving air quality</li>
-      <li> Easing dry skin and respiratory ailments due to dry air</li>
-    </ul>
+  <hr>
+  <!-- ===========Benefits of plants -->
+  <section id="benefits" class="benefits-area py-5 text-center">
+    <div class="benefits-content">
+      <span>
+        <h2>Benefits of plants</h2>
+      </span>
+      <ul>
+        <li>Improving your mood</li>
+        <li>Reducing fatigue</li>
+        <li> Lowering stress and anxiety</li>
+        <li> Improving office performance and focus</li>
+        <li> Boosting healing and pain tolerance</li>
+        <li> Minimizing the occurrence of headaches by improving air quality</li>
+        <li> Easing dry skin and respiratory ailments due to dry air</li>
+      </ul>
+    </div>
   </section>
-<!-- Frequently asked questions -->
-  <section id="faq" class="">
+  <hr>
+  <!-- ===============Frequently asked questions -->
+  <section id="faq" class="faq-sec">
     <div class="card">
       <div class="card-body bg-secondary-subtle">
+        <span class="d-flex justify-content-center">
+          <h2>FREQUENTLY ASKED QUESTIONS </h2>
+        </span>
         <ul>
-          <li>Question: How often should I water my plant?
-            Answer: Overwatering is a common problem, so it's better to err on the side of underwatering. The frequency
-            of
-            watering depends on several factors, including the plant type, pot size, drainage, and environmental
-            conditions.
-            Generally, water when the top inch of soil feels dry to the touch, and let the excess water drain out of the
-            pot
-            bottom.
+          <li>
+            <p>
+              <b>Question:</b> How often should I water my plant?
+              Answer: Overwatering is a common problem, so it's better to err on the side of underwatering. The
+              frequency
+              of
+              watering depends on several factors, including the plant type, pot size, drainage, and environmental
+              conditions.
+              Generally, water when the top inch of soil feels dry to the touch, and let the excess water drain out of
+              the
+              pot
+              bottom.
+            </p>
           </li>
 
-          <li>Question: Why are my plants leaves turning brown?
+          <li><p><b>Question:</b> Why are my plants leaves turning brown?
             Answer: Brown leaves can have several causes, such as overwatering, underwatering, lack of sunlight,
             nutrient
             deficiencies, pests, or diseases. Identifying the cause requires observing other signs and symptoms on the
-            plant. Consult a gardening resource or professional for help if you're struggling to diagnose the problem.
+            plant. Consult a gardening resource or professional for help if you're struggling to diagnose the problem.</p>
           </li>
 
-          <li>Question: What are some easy plants to care for?
+          <li><p><b>Question:</b> What are some easy plants to care for?
             Answer: Many plant options are suitable for beginners, even those with busy schedules. Some low-maintenance
             choices include:
 
@@ -170,22 +209,22 @@
             ZZ Plant (Zamioculcas zamiifolia)
             Spider Plant (Chlorophytum comosum)
             Monstera Deliciosa
-            Jade Plant (Crassula Ovata)
+            Jade Plant (Crassula Ovata)</p>
           </li>
 
           <li>
-            Question: How can I tell if my plant needs fertilizer?
-            Answer: If your plant appears stunted, lacks vibrant color, or has slow growth, it might benefit from
-            fertilizer. Most houseplants don't need frequent fertilization, usually only once a month or even less
-            during their active growing season. Always follow the specific instructions on the fertilizer product and
-            adjust the frequency depending on your plant's needs and environmental conditions.
+            <p><b>Question:</b> How can I tell if my plant needs fertilizer?
+              Answer: If your plant appears stunted, lacks vibrant color, or has slow growth, it might benefit from
+              fertilizer. Most houseplants don't need frequent fertilization, usually only once a month or even less
+              during their active growing season. Always follow the specific instructions on the fertilizer product and
+              adjust the frequency depending on your plant's needs and environmental conditions.</p>
           </li>
 
           <li>
-            Question: Can houseplants improve air quality in my home?
-            Answer: Yes, certain houseplants can help remove some common indoor air pollutants like formaldehyde and
-            benzene. However, research suggests their impact on overall air quality might be limited. Regardless,
-            houseplants can still contribute to a more pleasant and natural environment within your home.
+            <p><b>Question:</b> Can houseplants improve air quality in my home?
+              Answer: Yes, certain houseplants can help remove some common indoor air pollutants like formaldehyde and
+              benzene. However, research suggests their impact on overall air quality might be limited. Regardless,
+              houseplants can still contribute to a more pleasant and natural environment within your home.</p>
           </li>
 
 
@@ -193,17 +232,18 @@
       </div>
     </div>
   </section>
-
-  <section id="ourService" class="p-5">
+  <hr>
+  <!-- ================Service================= -->
+  <section id="ourService" class="service-area p-5">
     <div class="container">
       <div class="row">
         <div class="col">
-          <img style="width: 30rem; height: 20rem;" src="css/images/technologyImg.jpg" alt="">
+          <img style="width: 30rem; height: 20rem;" class="img-fluid  mx-auto py-5" src="css/images/technologyImg.jpg" alt="">
         </div>
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <p class="bg-primary-subtle">
+              <p class="">
                 Our team thrives on the art of web
                 development,
                 seamlessly blending design and functionality to bring visions to life. We don't just build websites; we
@@ -225,64 +265,74 @@
       </div>
     </div>
   </section>
-<!-- ===============Feedback=============== -->
-  <section id="feedback" class="bg-info">
-
-      <div class="container p-3 mt-5">
-        <div class="col-sm-6">
-            <form>
-                <div class="form-group row">
-                  <label for="username" class="col-sm-2 col-form-label">Username</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="username" placeholder="Enter your username">
-                  </div>
-                </div>
-          
-                <div class="form-group row">
-                  <label for="email" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                  </div>
-                </div>
-          
-                <div class="form-group row">
-                  <label for="countries" class="col-sm-2 col-form-label">Country</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" id="country" required="">
-                        <option value="">Choose...</option>
-                        <option>India</option>
-                        <option>America</option>
-                        <option>United Kingdom</option>
-                        <option>Australia</option>
-                        <option>Europe</option>
-                        <option>Russia</option>
-                        <option>Canada</option>
-                      </select>
-                  </div>
-                </div>
-          
-                <div class="form-group row">
-                  <label for="textarea" class="col-sm-2 col-form-label">Comments</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" id="textarea" rows="4" maxlength="100" placeholder="Enter your comments (100 words max)"></textarea>
-                  </div>
-                </div>
-          
-                <div class="form-group row">
-                  <div class="col-sm-10 offset-sm-2">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </div>
-            </form>
+  <hr class="py-2">
+  <!-- ===============Feedback=============== -->
+  <section id="feedback" class="bg-success-subtle pb-5" >
+    <h3 class="d-flex justify-content-center align-items-center py-5">YOUR FEEDBACK MATTERS</h3>
+    <div class="col-sm-5 mx-auto p-0 ">
+      <form>
+        <div class="form-group row my-2">
+          <label for="username" class="col-sm-2 col-form-label">Username</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+          </div>
         </div>
-  </section>
-  <footer id="contactUs" class="text-center m-5 container bg-success">
-    <p > Email</p>
-    <p>Github</p>
-    <p>Instagram</p>
-    <p>Facebook</p>
+
+        <div class="form-group row my-2">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+        </div>
+
+        <div class="form-group row my-2">
+          <label for="countries" class="col-sm-2 col-form-label">Country</label>
+          <div class="col-sm-10">
+            <select class="form-select" id="country" required="">
+              <option value="">Choose...</option>
+              <option>India</option>
+              <option>America</option>
+              <option>United Kingdom</option>
+              <option>Australia</option>
+              <option>Europe</option>
+              <option>Russia</option>
+              <option>Canada</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row my-2">
+          <label for="textarea" class="col-sm-2 col-form-label">Comments</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="textarea" rows="4" maxlength="100"
+              placeholder="Enter your comments (100 words max)"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group row my-2 text-center">
+          <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-primary ">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>  
+  <hr >
+  <footer id="contactUs" class="text-center p-5 container footer-sec">
+    <a href="">
+      <p> Email</p>
+    </a>
+    <a href="">
+      <p>Github</p>
+    </a>
+    <a href="">
+      <p>Instagram</p>
+    </a>
+    <a href="">
+      <p>Facebook</p>
+    </a>
 
   </footer>
+  <hr class="py-2">
 </body>
-
 </html>
