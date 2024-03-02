@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+//variables
+$primary-Color-1 : #93f33f;
+$primaryColor_2 : #e8a7a7;
+$primaryColor_3 : #b33c5e;
+$my-font-size : 25px;
+$mycolor : #6ccbe8;
+$containerSize: 30rem;
+
+body {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $primary-Color-1;
+}
+
+// this line ==========================
+.header {
+    padding: 2rem;
+
+    &_menus {
+        display: flex;
+        list-style-type: none;
+    }
+    &_link{
+        font-size: $my-font-size;
+    }
+}
+
+
+.homey {
+    background-color: $primaryColor_2 !important;
+}
+
+.top-nav,
+.container {
+    background-color: $primary-Color-1;
+    font-size: $my-font-size;
+}
+
+section .uploadArea {
+    font-size: $my-font-size;
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+header{
+    background-color: #114817;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.nav-link{
+    color: green;
+    font-weight: 600;
+    margin-left: 3rem;
+}
+.feature-box a{
+    text-decoration: none !important;
+    background-color:  #114817;
+    color: #5bd567;
+}
+.feature-box a:hover{
+    color: #fff;
+}
+.feature-box{
+    color: #011f04 ;
+}
+.Flight-Window-Image{
+    width: 90%;
+}

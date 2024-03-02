@@ -11,24 +11,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-light">
+<body>
     <div class="container">
-        <div class="row mt-5 p-5">
+        <div class="row mt-5 py-3 ">
             <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
                 <h2 class="text-center pt-3">Login</h2>
                 <p class="text-center text-muted lead mb-4">Join Us And Transform Your Experience</p>
                 <!-- Form start -->
                 <form action="#">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="" id="" placeholder="Email">
+                    <div class="mb-3 row">
+                        <label for="email" class="col-lg-4 col-form-label">Email:<span
+                                class="text-danger">*</span></label>
+                        <div class="col-lg-8">
+                            <input type="email" class="form-control" name="email" id="email" autocomplete="email"
+                                required />
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="" id="" placeholder="Password">
-                    </div>
-                    <div class="d-grid">
-                        <button type="button" class="btn btn-success">Signup</button>
-                        <p class="text-center text-muted mt-2"> Register now for free by clicking here <a href="index.html">Register</a></p>
-                    </div>
+                    <div class="mb-3 row">
+                        <label for="password" class="col-lg-4 col-form-label">Password:<span
+                                class="text-danger">*</span></label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control" name="password" id="password"
+                                autocomplete="new-password" required />
+                        </div>
+                        <div class="d-grid mt-3">
+                            <button type="button" class="btn btn-success">Signup</button>
+                            <p class="text-center text-muted mt-2"> Register now for free by clicking here - <a
+                                    href="signUp.html">Register</a></p>
+                            <a href="index.html" class="home-page text-center text-bold mt-2 fw-bold border-top border-5 p-3">INIYA TRAVELS</a>
+                        </div>
                 </form>
                 <!-- Form end -->
             </div>
