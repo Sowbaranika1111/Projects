@@ -24,6 +24,8 @@
                                 class="text-danger">*</span></label>
                         <div class="col-lg-8">
                             <input type="email" class="form-control" name="email" id="email" autocomplete="email"
+                            required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                title="Please enter a valid email address" 
                                 required />
                         </div>
                     </div>
@@ -32,10 +34,11 @@
                                 class="text-danger">*</span></label>
                         <div class="col-lg-8">
                             <input type="password" class="form-control" name="password" id="password"
-                                autocomplete="new-password" required />
+                                autocomplete="password" required pattern=".{8,}"
+                                title="Password must be at least 8 characters" required />
                         </div>
                         <div class="d-grid mt-3">
-                            <button type="button" class="btn btn-success">Signup</button>
+                            <button type="submit" class="btn btn-success">Sign in</button>
                             <p class="text-center text-muted mt-2"> Register now for free by clicking here - <a
                                     href="signUp.html">Register</a></p>
                             <a href="index.html" class="home-page text-center text-bold mt-2 fw-bold border-top border-5 p-3">INIYA TRAVELS</a>
