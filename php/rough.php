@@ -15,9 +15,15 @@ $soapObject2 = new Product();
 
 $combObject = new Product();
 
+<<<<<<< HEAD
 print $soapObject1 -> name."<br>";
 $soapObject1 -> name = 'toothpaste';
 print $soapObject1 -> name."<br>";
+=======
+print $soapObject -> name."<br>";
+$soapObject -> name = 'toothpaste';
+print $soapObject -> name."<br>";
+>>>>>>> a903b4ce3470ab337b19ed00822af39763c9ca8a
 
 $soapObject1 -> price = "10";
 $soapObject2 -> price = "20";
@@ -94,10 +100,18 @@ echo $flowerName = $result1[0]."<br>";
 
 //getting name,color via second method
 echo $flowerColor = $result2['flowerColor'];
+<<<<<<< HEAD
 //============================================================================================================================================
 
 // using a constructor and providing the necessary parameters while creating the object itself
 // thus eliminating the need for creating a separate method for parameters assignment
+=======
+
+using a constructor and providing the necessary parameters while creating the object itself
+thus eliminating the need for creating a separate method for parameters assignment
+
+//============================================================================================================================================
+>>>>>>> a903b4ce3470ab337b19ed00822af39763c9ca8a
   
 class FlowerShop
 {
@@ -123,6 +137,7 @@ $flower_2 = new FlowerShop("Lotus","Pink");
 
 echo "Name of the first flower: "  .$flower_1_name = $flower_1 -> get_name()."<br>";
 echo "Color of the second flower: ".$flower_2_color = $flower_2 -> get_color();
+<<<<<<< HEAD
 
 //============================================================================================================================================
 // destruct function is automatically called at the end of the script. It is enough if we simply create an object with the necessary parameters 
@@ -168,4 +183,6 @@ $banana -> parentIntro();
 $banana -> childClassBenefits();
 
 
+=======
+>>>>>>> a903b4ce3470ab337b19ed00822af39763c9ca8a
 ?>
