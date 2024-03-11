@@ -166,6 +166,25 @@ class Banana extends Fruits
 $banana = new Banana("Banana","Yellow"); //creating an object from the child class Banana , if u create an object from the parent class u can't access child class properties and methods.
 $banana -> parentIntro();
 $banana -> childClassBenefits();
-//========================Final===================
+//==================================Final================================
+// Final keyword is used to prevent class inheritance or to prevent method overriding
 
+final class PettyShop{
+  //codes
+  public $color;
+  function __construct($color)
+  {
+    $this -> color = $color;
+  }
+  function get_colorr(){
+    return $this-> color;
+  }
+}
+class Strawberry extends PettyShop{
+  //codes
+}
+$strawberryObj = new Strawberry("Pink");
+echo $strawberryColor = $strawberryObj -> get_colorr();
+
+////Fatal error: Class Strawberry cannot extend final class PettyShop in E:\xampp\htdocs\bootstrap\php\learnings.php on line 184
 ?>
