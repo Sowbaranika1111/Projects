@@ -217,4 +217,7 @@ $apple_1->intro();
 // echo $strawberryColor = $strawberryObj -> get_colorr();
 
 ////Fatal error: Class Strawberry cannot extend final class PettyShop in E:\xampp\htdocs\bootstrap\php\learnings.php on line 184
+
+
+
 ?>
