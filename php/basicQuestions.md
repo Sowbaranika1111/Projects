@@ -27,7 +27,7 @@
 
 <hr>
 
-↪️ ***How html is compiled?**
+↪️ **How html is compiled?**
 
 - Browser does the process of interpreting and displaying web content ( HTML, CSS, and JavaScript files)
 - It interprets HTML documents by parsing the HTML source code .
@@ -54,6 +54,7 @@
 - POST :  It submits the processed data to a specified resource
 
 <hr>
+
 ↪️ **What is REST API?**
 
 - An interface that two computer systems use to exchange information securely over the internet
