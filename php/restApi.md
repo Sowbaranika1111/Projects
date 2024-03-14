@@ -52,5 +52,7 @@
 
 - DELETE request to remove the resource
 
-[<span style="color:black">RESTful API</span>](https://aws.amazon.com/what-is/restful-api/)
+<!-- [<span style="color:black">RESTful API</span>](https://aws.amazon.com/what-is/restful-api/) -->
+
+[RESTful API](https://aws.amazon.com/what-is/restful-api/){: .black-text}
 
