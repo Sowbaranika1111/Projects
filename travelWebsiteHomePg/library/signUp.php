@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min_fontAwesome.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php include "./partials/head.php"?>
 <body >
     <div class="container">
         <div class="row mt-2 ">
@@ -55,7 +44,7 @@
                         <p class="text-center text-muted mt-2">When you register by clicking the Signup Button, you
                             agree to our <a href="#">Terms and
                                 Conditions</a> and <a href="#">Privacy Policy</a></p>
-                        <p class="text-center">Already have an account?<a href="login.html">Login Here</a></p>
+                        <p class="text-center">Already have an account?<a href="login.php">Login Here</a></p>
                     </div>
                 </form>
             </div>
