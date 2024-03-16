@@ -14,6 +14,7 @@ ini_set('display_errors', 1);
             <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
                 <h2 class="text-center pt-3">Login</h2>
                 <p class="text-center text-muted lead mb-4">Join Us And Transform Your Experience</p>
+
                 <!-- Form start -->
                 <form action="" method="POST">
                     <div class="mb-3 row">
@@ -34,6 +35,7 @@ ini_set('display_errors', 1);
                         </div>
                 </form>
                 <!-- Form end -->
+                
             </div>
         </div>
     </div>

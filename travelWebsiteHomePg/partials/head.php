@@ -1,3 +1,11 @@
+<?php $title = "Experience the feel of travelling";
+
+$cssFiles = array(
+    "css/bootstrap.min.css",
+    "css/homePg.css"
+);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +13,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min_fontAwesome.css">
-    <link rel="stylesheet" href="css/homePg.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title><?php $title ?></title>
+
+    <?php foreach ($cssFiles as $cssFile) : ?>
+        <link rel="stylesheet" href="<?php echo $cssFile; ?>">
+    <?php endforeach; ?>
+    
 </head>
 
 <body class="homePg-body">

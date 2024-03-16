@@ -1,6 +1,7 @@
 <?php
 include 'db_conn.php';
 
+// =================For Signup================
 class User
 {
     public static function signup($firstName, $lastName, $email, $password)
@@ -21,11 +22,12 @@ class User
         }
     }
 
+    // =============For Login=============
+    
     public static function login($email, $password)
     {
         $conn = Database::getConnection();
 
-        // Query to select user with the given email and password
         $sql = "SELECT * FROM `signup` WHERE `email` = '$email' AND `password` = '$password'";
 
         try {
@@ -35,13 +37,12 @@ class User
                 throw new Exception("Error: " . $conn->error);
             }
 
-            // Check if any row was returned
+            // to check if any row was returned
             if ($result->num_rows > 0) {
                 // User found, return true
                 // print("login success");
                 return true;
             } else {
-                // No user found with the provided credentials, return false
                 return false;
             }
         } catch (Exception $e) {
