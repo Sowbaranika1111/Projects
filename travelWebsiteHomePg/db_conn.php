@@ -9,7 +9,7 @@ class Database
             $servername = "localhost";
             $username = "root";
             $password = "";
-            $db_name = "";
+            $db_name = "formData";
 
             // Create connection
             $connection = new mysqli($servername,$username,$password,$db_name);

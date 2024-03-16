@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min_fontAwesome.css">
     <link rel="stylesheet" href="css/homePg.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
-<body>
+<body class="homePg-body">
