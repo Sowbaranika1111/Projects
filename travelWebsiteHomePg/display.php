@@ -99,5 +99,6 @@ $usersData = Display::display(); //Fetching data from database
 //     }
 // } catch (Exception $e) {
 //     echo "Error: " . $e->getMessage();
+//
 // }
 ?>
