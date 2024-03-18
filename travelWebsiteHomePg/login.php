@@ -1,21 +1,18 @@
-<?php include "./partials/head.php";
+<?php 
+include "./partials/head.php";
 include 'controller/insert.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
-
 <head>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="loginRegister-body">
     <div class="container">
         <div class="row mt-5 py-3 ">
             <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
                 <h2 class="text-center pt-3">Login</h2>
                 <p class="text-center text-muted lead mb-4">Join Us And Transform Your Experience</p>
-
-                <!-- Form start -->
                 <form action="" method="POST">
                     <div class="mb-3 row">
                         <label for="email" class="col-lg-4 col-form-label">Email:<span class="text-danger">*</span></label>
@@ -34,8 +31,6 @@ ini_set('display_errors', 1);
                             <!-- <a href="travel.php" class="home-page text-center text-bold mt-2 fw-bold border-top border-5 p-3">INIYA TRAVELS</a> -->
                         </div>
                 </form>
-                <!-- Form end -->
-                
             </div>
         </div>
     </div>
@@ -47,13 +42,10 @@ if (isset($_POST["submit"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // Attempt to login
     if (User::login($email, $password)) {
-        // If login successful, redirect to travel.php
-        header("Location: travel.php");
-        exit(); // Stop further execution
+        // header("Location: travel.php");
+        header("Location: display.php");
     } else {
-        // Handle login failure, maybe display an error message
         echo "Login failed. Please check your credentials.";
     }
 }

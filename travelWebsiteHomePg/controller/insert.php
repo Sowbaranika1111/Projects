@@ -1,8 +1,8 @@
 <?php
 include 'db_conn.php';
 
-// =================For Signup================
 class User
+// =================For Signup================
 {
     public static function signup($firstName, $lastName, $email, $password)
     {
@@ -39,7 +39,6 @@ class User
 
             // to check if any row was returned
             if ($result->num_rows > 0) {
-                // User found, return true
                 // print("login success");
                 return true;
             } else {
