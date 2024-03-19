@@ -44,6 +44,7 @@ if (isset($_POST["submit"])) {
 
     if (User::login($email, $password)) {
         // header("Location: travel.php");
+        // header("Location: display.php");
         header("Location: display.php");
     } else {
         echo "Login failed. Please check your credentials.";

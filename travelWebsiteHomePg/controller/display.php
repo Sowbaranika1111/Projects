@@ -21,8 +21,8 @@ class Display
             // Getting no. of rows
             $numRows = $resultSet->num_rows;
             if ($numRows > 0) {
-                while ($row = $resultSet->fetch_assoc()) {
-                    $userData[] = $row;
+                while ($userDetailsRow = $resultSet->fetch_assoc()) {
+                    $userData[] = $userDetailsRow;
                 }
                 return $userData;
             } else {    

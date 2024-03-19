@@ -9,7 +9,6 @@ $usersData = Display::display(); //Fetching data from database
 //print_r($usersData); // Displaying associative arrays in each index
 ?>
 
-
 <table class="table">
     <thead>
         <tr>
@@ -18,7 +17,7 @@ $usersData = Display::display(); //Fetching data from database
             <th scope="col">Last name</th>
             <th scope="col">Email</th>
             <th scope="col">Password</th>
-            <th scope="col">Edit</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -29,21 +28,12 @@ $usersData = Display::display(); //Fetching data from database
         echo"<td>".$row["lastName"]."</td>";
         echo"<td>".$row["email"]."</td>";
         echo"<td>".$row["password"]."</td>";
-        echo "<td><button>EDIT</button>";
+        echo "<td><a href='edit.php?id=$row[id]'>Update</a><td>";
         echo "</tr>";
         }?>
     </tbody>
 </table>
 
-<?php 
-// foreach($usersData as $row) 
-// {
-//     echo "ID: ".$row["id"]."<br>";
-//     echo "First name: ".$row["firstName"]."<br>";
-//     echo "Last name".$row["lastName"]."<br>";
-//     echo "Email: ".$row["email"]."<br>";
-//     echo "Password: ".$row["password"]."<br>";
-// }
 
 
 
@@ -59,7 +49,7 @@ $usersData = Display::display(); //Fetching data from database
 
 
 
-//// Don't follow the below method..always have a separate file for the php methods and from there fetch and display in a separate file.
+<?php //// Don't follow the below method..always have a separate file for the php methods and from there fetch and display in a separate file.
 // if (!$result) {
     //     throw new Exception("Error executing query: " . $conn->error);
     // }
