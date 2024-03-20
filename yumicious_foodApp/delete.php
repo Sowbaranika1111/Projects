@@ -15,12 +15,12 @@ try {
     if ($stmt->affected_rows > 0) {
         echo "<script>alert('Deleted successfully')</script>";
 ?>
-        <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/travelWebsiteHomePg/display.php" />
+        <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/yumicious_foodApp/display.php" />
     <?php
     } else {
         echo "<script>alert('Not Deleted ')</script>";
     ?>
-        <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/travelWebsiteHomePg/display.php" />
+        <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/yumicious_foodApp/display.php" />
 <?php
     }
 } catch (PDOException $e) {

@@ -2,7 +2,7 @@
 include("./partials/head.php");
 include("controller/display.php");
 error_reporting(E_ALL);
-ini_set("display_errors",1);
+ini_set("display_errors", 1);
 
 $usersData = Display::display(); //Fetching data from database
 // print($usersData); // ==> it is printing the type (Array-printed)
@@ -17,24 +17,24 @@ $usersData = Display::display(); //Fetching data from database
             <th scope="col">Last name</th>
             <th scope="col">Email</th>
             <th scope="col">Password</th>
-            <th scope="col" >Action</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach($usersData as $row){
-        echo("<tr>");
-        echo"<td>".$row["id"]."</td>";
-        echo"<td>".$row["firstName"]."</td>";
-        echo"<td>".$row["lastName"]."</td>";
-        echo"<td>".$row["email"]."</td>";
-        echo"<td>".$row["password"]."</td>";
+        <?php foreach ($usersData as $row) {
+            echo ("<tr>");
+            echo "<td>" . $row["id"] . "</td>";
+            echo "<td>" . $row["firstName"] . "</td>";
+            echo "<td>" . $row["lastName"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
+            echo "<td>" . $row["password"] . "</td>";
 
-        echo "<td><a href='edit.php?id=$row[id]'><input type='submit' value='Update' class='bg-success text-light border rounded'></a>";
+            echo "<td><a href='edit.php?id=$row[id]'><input type='submit' value='Update' class='bg-success text-light border rounded'></a>";
 
-        echo "<a href='delete.php?id=$row[id]'><input type='submit' value='Delete' class='bg-danger text-light border rounded'></a><td>";
+            echo "<a href='delete.php?id=$row[id]'><input type='submit' value='Delete' class='bg-danger text-light border rounded'></a><td>";
 
-        echo "</tr>";
-        }?>
+            echo "</tr>";
+        } ?>
     </tbody>
 </table>
 
@@ -55,8 +55,8 @@ $usersData = Display::display(); //Fetching data from database
 
 <?php //// Don't follow the below method..always have a separate file for the php methods and from there fetch and display in a separate file.
 // if (!$result) {
-    //     throw new Exception("Error executing query: " . $conn->error);
-    // }
+//     throw new Exception("Error executing query: " . $conn->error);
+// }
 
 //     if ($result->num_rows > 0) {
 //         echo '<div class="container">
