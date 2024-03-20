@@ -1,5 +1,4 @@
 <?php
-
 include "./partials/head.php";
 // include "db_conn.php"; 
 include 'controller/display.php';
@@ -9,7 +8,6 @@ ini_set('display_errors', 1);
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Fetch user details by ID
     $userData = Display::display();
     $userDetailsRow = null;
     foreach ($userData as $row) {
@@ -19,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
         }
     }
 }
-
 ?>
 
 <head>
@@ -77,10 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    //======================new
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-        // Handle form submission
-        // Update user data in the database
+
         try {
             $conn = Database::getConnection();
             $sql = "UPDATE signup SET firstName = ?, lastName = ?, email = ?, password = ? WHERE id = ?";
@@ -108,21 +103,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 }
 
-
-// if (isset($_POST['submit'])) {
-//     $fname = $_POST['firstName'];
-//     $lname = $_POST['lastName'];
-//     $email = $_POST['email'];
-//     $password = $_POST['password'];
-
-//     $query = "INSERT INTO signup (firstName,lastName,email,password) VALUES ('$fname','$lname','$email','$password')";
-//     $data = mysqli_query($conn, $query);
-//     $total = mysqli_num_rows($data);
-
-//     if ($data) {
-//         echo 'Data Updated';
-//     } else {
-//         echo 'Not Updated';
-//     }
-// }
 ?>

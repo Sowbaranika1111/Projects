@@ -2,7 +2,7 @@
 // Define an array of navigation links
 $navLinks = array(
     array("Home", "#"),
-    array("Admin", "#"),
+    array("Admin", "admin_display.php"),
     array("Category", "#"),
     array("Food", "#"),
     array("Order", "#"),

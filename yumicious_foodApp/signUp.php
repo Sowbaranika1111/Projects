@@ -1,4 +1,4 @@
-<?php include "./partials/head.php";
+<?php 
 include "./partials/head.php";
 include 'controller/insert.php';
 error_reporting(E_ALL);
@@ -13,7 +13,6 @@ ini_set('display_errors',1);
             <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
                 <h2 class="text-center pt-3">Signup Now</h2>
                 <p class="text-center text-muted lead mb-4">Join Us And Transform Your Experience</p>
-                <!-- Form start -->
                 <form action="" method="POST" >
                     <div class="mb-3 row">
                         <label for="firstName" class="col-lg-4 col-form-label">First Name:<span class="text-danger">*</span></label>
@@ -39,12 +38,6 @@ ini_set('display_errors',1);
                             <input type="password" class="form-control" name="password" id="password" required/>
                         </div>
                     </div>
-                    <!-- <div class="mb-3 row">
-                        <label for="confirmPass" class="col-lg-4 col-form-label">Confirm Password:<span class="text-danger">*</span></label>
-                        <div class="col-lg-8">
-                            <input type="password" class="form-control" name="confirmPass" id="confirmPass">
-                        </div>
-                    </div> -->
                     <div class="d-grid">
                         <button type="submit" class="btn btn-success" name="submit">Signup</button>
                         <p class="text-center text-muted mt-2">When you register by clicking the Signup Button, you
@@ -67,9 +60,7 @@ if(isset($_POST["submit"]))
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // User::signup($firstName,$lastName,$email,$password);
     if(User::signup($firstName,$lastName,$email,$password)){
-        // If signup successful,redirecting to login page
         header("Location: login.php");
         exit();
     }
