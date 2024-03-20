@@ -17,7 +17,7 @@ $usersData = Display::display(); //Fetching data from database
             <th scope="col">Last name</th>
             <th scope="col">Email</th>
             <th scope="col">Password</th>
-            <th scope="col">Action</th>
+            <th scope="col" >Action</th>
         </tr>
     </thead>
     <tbody>
@@ -28,7 +28,11 @@ $usersData = Display::display(); //Fetching data from database
         echo"<td>".$row["lastName"]."</td>";
         echo"<td>".$row["email"]."</td>";
         echo"<td>".$row["password"]."</td>";
-        echo "<td><a href='edit.php?id=$row[id]'>Update</a><td>";
+
+        echo "<td><a href='edit.php?id=$row[id]'><input type='submit' value='Update' class='bg-success text-light border rounded'></a>";
+
+        echo "<a href='delete.php?id=$row[id]'><input type='submit' value='Delete' class='bg-danger text-light border rounded'></a><td>";
+
         echo "</tr>";
         }?>
     </tbody>

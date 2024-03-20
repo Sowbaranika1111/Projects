@@ -22,6 +22,7 @@ class Database
             else
             {
                 Database::$conn = $connection;
+                // echo "Connected successfully";
                 return Database::$conn;
             }
         }

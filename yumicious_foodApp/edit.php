@@ -1,22 +1,4 @@
 <?php
-// include "./partials/head.php";
-// include "db_conn.php";
-// include 'controller/display.php';
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-
-
-// // echo $_GET['id'];
-// $id = $_GET['id'];
-
-// $sql = "SELECT * FROM `signup` WHERE id='$id'";
-
-// // Execute the query
-// $data = mysqli_query($conn, $sql);
-
-// // Getting no. of rows
-// $numRows = mysqli_num_rows($data);
-// $userDetailsRow = mysqli_fetch_assoc($data);
 
 include "./partials/head.php";
 // include "db_conn.php"; 
@@ -95,23 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-
-    ////Update user data in the database
-    // try {
-    //     $conn = Database::getConnection();
-    //     $sql = "UPDATE signup SET firstName = ?, lastName = ?, email = ?, password = ? WHERE id = ?";
-    //     $stmt = $conn->prepare($sql);
-    //     $stmt->execute([$fname, $lname, $email, $password, $_GET['id']]);
-
-    //     if ($stmt->affected_rows > 0) {
-    //         echo 'Data Updated';
-    //     } else {
-    //         echo 'Not Updated';
-    //     }
-    // } catch (PDOException $e) {
-    //     error_log("Error: " . $e->getMessage());
-    //     echo 'Error updating data';
-    // }
     //======================new
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         // Handle form submission
@@ -121,18 +86,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
             $sql = "UPDATE signup SET firstName = ?, lastName = ?, email = ?, password = ? WHERE id = ?";
             $stmt = $conn->prepare($sql);
             $stmt->execute([$_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_GET['id']]);
-    
+
             if ($stmt->affected_rows > 0) {
-                echo 'Data Updated';
-            }
-            elseif($stmt->affected_rows == 0){
-                echo 'No change is found';
+                echo "<script>alert('Record Updated')</script>";
+?>
+                <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/travelWebsiteHomePg/display.php" />
+<?php
+            } elseif ($stmt->affected_rows == 0) {
+                echo "<script>alert('No change is found')</script>";
             } else {
                 echo 'Not Updated';
             }
         } catch (PDOException $e) {
             error_log("Error: " . $e->getMessage());
-            echo 'Error updating data';
+            echo 'Error on updating data';
         }
     }
 }
