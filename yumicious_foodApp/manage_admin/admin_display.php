@@ -1,6 +1,7 @@
 <?php
-include("./partials/admin_head.php");
+include("./partials/head.php");
 include("controller/admin_display.php");
+include("./partials/admin_header.php");
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 

@@ -6,6 +6,7 @@ $navLinks = array(
     array("Category", "#"),
     array("Food", "#"),
     array("Order", "#"),
+    array("Customers", "../display.php"),
     array("Logout", "#")
 );
 ?>
