@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.loginRegister-body{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #114817 !important;
+    /* background-color:  #fff !important ; */
+}
+
+.wrapper{
+  border-top: 3px solid green;
+}
+.wrapper a{
+  text-decoration: none;
+  color: green;
+}
+.home-page:hover {
+  font-size: 1.1rem;
+  color: black; /* Adjust the font size as needed */
+}
+
+

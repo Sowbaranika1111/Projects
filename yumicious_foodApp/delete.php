@@ -14,14 +14,12 @@ try {
 
     if ($stmt->affected_rows > 0) {
         echo "<script>alert('Deleted successfully')</script>";
-?>
-        <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/yumicious_foodApp/display.php" />
-    <?php
+        echo "<script>window.location.href = 'display.php';</script>";
+        exit();
     } else {
         echo "<script>alert('Not Deleted ')</script>";
-    ?>
-        <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/yumicious_foodApp/display.php" />
-<?php
+        echo "<script>window.location.href = 'display.php';</script>";
+
     }
 } catch (PDOException $e) {
     error_log("Error: " . $e->getMessage());

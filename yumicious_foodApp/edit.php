@@ -89,13 +89,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
             if ($stmt->affected_rows > 0) {
                 echo "<script>alert('Record Updated')</script>";
-?>
-                <meta http-equiv="refresh" content="2; url = http://localhost/bootstrap/travelWebsiteHomePg/display.php" />
-<?php
+                echo "<script>window.location.href = 'display.php';</script>";
+                exit();
             } elseif ($stmt->affected_rows == 0) {
                 echo "<script>alert('No change is found')</script>";
+                echo "<script>window.location.href = 'display.php';</script>";
+                //When you use header("Location: display.php"), it will redirect the user to display.php immediately without waiting for the alert to be displayed in the browser.
+                //header("Location: display.php"); so use Windows.location from Javascript
+                exit();
             } else {
                 echo 'Not Updated';
+                echo "<script>window.location.href = 'display.php';</script>";
             }
         } catch (PDOException $e) {
             error_log("Error: " . $e->getMessage());
