@@ -1,8 +1,8 @@
 <?php
-include("partials/head.php");
+include("partials/admin_head.php");
 include("partials/admin_header.php");
-include("partials/admin_content.php");
-include("partials/admin_footer.php");
+include("admin_display.php");
+include("./partials/admin_footer.php");
 
 
 ?>
