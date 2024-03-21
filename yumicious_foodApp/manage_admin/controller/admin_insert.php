@@ -59,7 +59,7 @@ class FoodCategoryInsert
         $conn = Database::getConnection();
 
         $sql = "INSERT INTO food_category('title','featured','is_available')
-                VALUES ($title, $featured, $is_available) ";
+                VALUES ('$title', '$featured', '$is_available') ";
 
         try {
             $result = $conn->query($sql);

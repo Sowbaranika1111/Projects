@@ -51,15 +51,43 @@ class FoodCategoryDisplay
             $numRows = $resultSet->num_rows;
             if ($numRows > 0) {
                 while ($foodRow = $resultSet->fetch_assoc()) {
+                    // Convert is_available to "Yes" or "No"
+                    $foodRow['is_available'] = $foodRow['is_available'] ? "Yes" : "No";
                     $foodData[] = $foodRow;
                 }
             }
-        }
-        catch (PDOException $e)
-        {
+            return $foodData; // Return the fetched data
+        } catch (PDOException $e) {
             error_log("Error: ".$e->getMessage());
             return false;
         }
     }
 }
+
+// class FoodCategoryDisplay
+// {
+//     public static function food_category_display()
+//     {
+//         try {
+//             $conn = Database::getConnection();  
+//             $foodData = array();
+
+//             $sql = "SELECT * FROM food_category";
+//             $result = $conn->prepare($sql);
+//             $result->execute();
+//             $resultSet = $result->get_result();
+//             $numRows = $resultSet->num_rows;
+//             if ($numRows > 0) {
+//                 while ($foodRow = $resultSet->fetch_assoc()) {
+//                     $foodData[] = $foodRow;
+//                 }
+//             }
+//         }
+//         catch (PDOException $e)
+//         {
+//             error_log("Error: ".$e->getMessage());
+//             return false;
+//         }
+//     }
+// }
 

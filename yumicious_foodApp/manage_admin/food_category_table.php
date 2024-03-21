@@ -1,5 +1,4 @@
 <?php 
-include("./controller/admin_insert.php");
 include("./partials/head.php");
 include("./controller/admin_display.php");
 include("./partials/admin_footer.php");
@@ -14,7 +13,7 @@ $foodData = FoodCategoryDisplay::food_category_display();
     <h3 class="mx-auto px-2">Manage Food Category</h3>
 </div>
     <div class="container mt-4">
-        <a href='admin_category_form.php'><input type='submit' value="Add Food" name='submit' class='bg-success text-light border rounded'></a>
+        <a href='food_category_form.php'><input type='submit' value="Add Food" name='submit' class='bg-success text-light border rounded'></a>
 
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -32,11 +31,13 @@ $foodData = FoodCategoryDisplay::food_category_display();
                     <?php foreach ($foodData as $row) : ?>
                         <tr>
                             <td><?php echo $row["id"]; ?></td>
-                            <td><?php echo $row["userName"]; ?></td>
-                            <td><?php echo $row["email"]; ?></td>
+                            <td><?php echo $row["title"]; ?></td>
+                            <td><?php echo $row["featured"]; ?></td>
+                            <td><?php echo $row["is_available"]; ?></td>
+
                             <td>
-                                <a href='admin_edit.php?id=<?php echo $row["id"]; ?>' class='btn btn-success'>Update</a>
-                                <a href='admin_delete.php?id=<?php echo $row["id"]; ?>' class='btn btn-danger'>Delete</a>
+                                <a href='food_category_edit.php?id=<?php echo $row["id"]; ?>' class='btn btn-success'>Update</a>
+                                <a href='food_category_delete.php?id=<?php echo $row["id"]; ?>' class='btn btn-danger'>Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

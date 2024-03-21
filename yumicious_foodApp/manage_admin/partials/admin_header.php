@@ -3,7 +3,7 @@
 $navLinks = array(
     array("Home", "#"),
     array("Admin", "admin_login.php"),
-    array("Category", "#"),
+    array("Category", "food_category_table.php"),
     array("Food", "#"),
     array("Order", "#"),
     array("Customers", "../display.php"),

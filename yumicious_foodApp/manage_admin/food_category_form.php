@@ -1,5 +1,5 @@
 <?php
-include("admin_insert.php");
+include("./controller/admin_insert.php");
 include("./partials/head.php");
 include("./partials/admin_footer.php");
 ?>
@@ -14,13 +14,13 @@ include("./partials/admin_footer.php");
                         <input type="text" class="form-control" name="title" id="title" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
+                <!-- <div class="mb-3 row">
                     <label for="image" class="col-lg-4 col-form-label">Image:<span class="text-danger">*</span></label>
                     <div class="col-lg-8">
                         <input type="file" class="form-control" name="image" id="image">
                         <button type="button" class="btn btn-light border mt-2" onclick="resetImage()">Cancel Image</button>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="mb-3 row">
                     <label for="featured" class="col-lg-4 col-form-label">Featured:<span class="text-danger">*</span></label>
@@ -57,8 +57,9 @@ if(isset($_POST["submit"]))
 {
     $title = $_POST["title"];
     $featured = $_POST["featured"];
-    $is_available = $_POST["is_available"];
-
+    // $is_available = $_POST["is_available"];
+    $is_available = isset($_POST["is_available"]) ? 1 : 0;
+    
     if (FoodCategoryInsert::food_category($title,$featured,$is_available)){
         echo "<script>alert('New food category added')</script>";
         // echo "<script>window.location.href()</script>";
