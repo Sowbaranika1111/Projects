@@ -1,20 +1,20 @@
-<?php
+<?php 
+include("./controller/admin_insert.php");
 include("./partials/head.php");
-include("controller/admin_display.php");
-include("./partials/admin_header.php");
+include("./controller/admin_display.php");
 include("./partials/admin_footer.php");
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-$usersData = Display::display(); //Fetching data from database
-// print($usersData); // ==> it is printing the type (Array-printed)
-//print_r($usersData); // Displaying associative arrays in each index
+$foodData = FoodCategoryDisplay::food_category_display();
 ?>
+
 <div class="container bg-dark-subtle p-4 my-5">
-    <h3 class="mx-auto px-2">Manage Admin</h3>
+    <h3 class="mx-auto px-2">Manage Food Category</h3>
 </div>
     <div class="container mt-4">
-        <a href='admin_registration.php'><input type='submit' value="Add admin" name='submit' class='bg-success text-light border rounded'></a>
+        <a href='admin_category_form.php'><input type='submit' value="Add Food" name='submit' class='bg-success text-light border rounded'></a>
 
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -22,13 +22,14 @@ $usersData = Display::display(); //Fetching data from database
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">User Name</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Featured</th>
+                        <th scope="col">Is_Available</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($usersData as $row) : ?>
+                    <?php foreach ($foodData as $row) : ?>
                         <tr>
                             <td><?php echo $row["id"]; ?></td>
                             <td><?php echo $row["userName"]; ?></td>

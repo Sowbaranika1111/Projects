@@ -7,12 +7,12 @@ ini_set('display_errors',1);
 <head>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="loginRegister-body">
+<body>
     <div class="container">
         <div class="row mt-2 ">
             <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
                 <h2 class="text-center pt-3">Signup Now</h2>
-                <p class="text-center text-muted lead mb-4">Join Us And Transform Your Experience</p>
+                <p class="text-center text-muted lead mb-4">Experience The Taste Of Taste</p>
                 <form action="" method="POST" >
                     <div class="mb-3 row">
                         <label for="firstName" class="col-lg-4 col-form-label">First Name:<span class="text-danger">*</span></label>

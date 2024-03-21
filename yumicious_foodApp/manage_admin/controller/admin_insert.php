@@ -2,12 +2,12 @@
 include 'db_conn.php';
 
 class AdminReg
-// =================For Signup================
+// =============================For Signup====================================
 {
     public static function adminData($username, $email, $password)
     {
         $conn = Database::getConnection();
-        $sql = "Insert Into `adminData`(`username`,`email`,`password`)
+        $sql = "Insert Into `admindata`(`username`,`email`,`password`)
         Values('$username','$email',$password)";
         try {
             $result = $conn->query($sql);
@@ -21,14 +21,13 @@ class AdminReg
             return false;
         }
     }
-
-    // =============For Login=============
+// ==============================For Login=====================================
     
-    public static function login($email, $password)
+    public static function adminlogin($email, $password)
     {
         $conn = Database::getConnection();
 
-        $sql = "SELECT * FROM `signup` WHERE `email` = '$email' AND `password` = '$password'";
+        $sql = "SELECT * FROM `admindata` WHERE `email` = '$email' AND `password` = '$password'";
 
         try {
             $result = $conn->query($sql);
@@ -47,6 +46,31 @@ class AdminReg
         } catch (Exception $e) {
             // Log the error instead of echoing it
             error_log("Error: " . $e->getMessage());
+            return false;
+        }
+    }
+}
+
+// ========================Food category insertion========================
+class FoodCategoryInsert
+{
+    public static function food_category($title, $featured, $is_available)
+    {
+        $conn = Database::getConnection();
+
+        $sql = "INSERT INTO food_category('title','featured','is_available')
+                VALUES ($title, $featured, $is_available) ";
+
+        try {
+            $result = $conn->query($sql);
+
+            if (!$result) {
+                throw new Exception("". $conn->error);
+            }
+            return true;
+        }
+        catch (Exception $e) {
+            error_log("Error detected". $e->getMessage());
             return false;
         }
     }

@@ -1,8 +1,7 @@
-<?php $title = "Experience the feel of travelling";
+<?php $title = "Taste the taste";
 
 $cssFiles = array(
     "css/bootstrap.min.css",
-    "css/homeP.css"
 );
 
 ?>
@@ -21,4 +20,3 @@ $cssFiles = array(
     
 </head>
 <body>
-<header>

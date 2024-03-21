@@ -1,5 +1,5 @@
 <?php
-include("./partials/admin_head.php");
+include("./partials/head.php");
 include("./controller/admin_insert.php");
 ?>
 

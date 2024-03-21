@@ -5,7 +5,6 @@ $title = 'Dashboard' ?>
 
 <head><?php $title ?></head>
 
-
 <body>
         <header class="bg-light border m-2 py-2">
             <div class="container-fluid d-flex justify-content-center align-items-center m-2 p-2">
