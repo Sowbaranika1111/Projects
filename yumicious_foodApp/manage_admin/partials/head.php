@@ -17,6 +17,9 @@ $cssFiles = array(
     <?php foreach ($cssFiles as $cssFile) : ?>
         <link rel="stylesheet" href="<?php echo $cssFile; ?>">
     <?php endforeach; ?>
+    <!-- the pop-up for adding new admin is displayed only after adding the below inclusion in the header  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     
 </head>
 <body>

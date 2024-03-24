@@ -11,7 +11,7 @@ class Display
             $conn = Database::getConnection();
         
             $userData = array();
-            $sql = "SELECT * FROM `adminData`";
+            $sql = "SELECT * FROM `admindata`";
         
             // Execute the query
             $result = $conn->prepare($sql);

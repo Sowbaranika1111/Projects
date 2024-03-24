@@ -1,7 +1,7 @@
 <?php
 // Define an array of navigation links
 $navLinks = array(
-    array("Home", "#"),
+    array("Home", "admin_homepg.php"),
     array("Admin", "admin_login.php"),
     array("Category", "food_category_table.php"),
     array("Food", "#"),
