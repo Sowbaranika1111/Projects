@@ -2,7 +2,6 @@
 class Database
 {
     public static $conn = null;
-
     public static function getConnection()
     {
         if (Database::$conn == null){

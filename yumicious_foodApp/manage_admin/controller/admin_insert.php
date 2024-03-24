@@ -4,11 +4,11 @@ include 'db_conn.php';
 class AdminReg
 // =============================For Signup====================================
 {
-    public static function adminData($username, $email, $password)
+    public static function adminData($userName, $email, $password)
     {
         $conn = Database::getConnection();
-        $sql = "Insert Into `admindata`(`username`,`email`,`password`)
-        Values('$username','$email',$password)";
+        $sql = "Insert Into `admindata`(`userName`,`email`,`password`)
+        Values('$userName','$email',$password)";
         try {
             $result = $conn->query($sql);
             if (!$result) {
