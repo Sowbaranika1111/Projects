@@ -43,7 +43,8 @@ $usersData = Display::display(); //Fetching data from database
         </div>
     </div>
 </div>
-<!-- Bootstrap Modal for adding admin -->
+
+<!-- Bootstrap Modal for adding admin in a pop-up-->
 <div class="modal fade" id="addAdminModal" tabindex="-1" role="dialog" aria-labelledby="addAdminModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -77,7 +78,7 @@ $usersData = Display::display(); //Fetching data from database
 </div>
 
 <?php
-// Form submission handling for adding admin
+
 if(isset($_POST["submit"]))
 {
     $userName = $_POST["userNameModal"];

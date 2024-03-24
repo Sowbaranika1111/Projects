@@ -16,9 +16,7 @@ class Display
             // Execute the query
             $result = $conn->prepare($sql);
             $result->execute();
-            // Getting result set
             $resultSet = $result->get_result();
-            // Getting no. of rows
             $numRows = $resultSet->num_rows;
             if ($numRows > 0) {
                 while ($userDetailsRow = $resultSet->fetch_assoc()) {
